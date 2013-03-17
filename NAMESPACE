@@ -1,0 +1,13 @@
+importFrom("maptools", "readShapePoly")
+importFrom("rgeos", "gCentroid", "gDistance")
+importFrom("classInt", "classIntervals")
+importFrom("sp", "spplot", "CRS")
+importFrom("geosphere", "distm")
+
+export("ReadPoly",
+       "ImagePoly",
+       "DistanceMatrix",
+       "addID"
+	)
+
+

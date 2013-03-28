@@ -6,12 +6,9 @@ function(poly.dat){
   }
   has.hole<-which(n.poly.all>1)
   n.poly<-n.poly.all[has.hole]
-  n.holes <- length(has.hole)
-  for (k in 1:n.holes){
-    print(paste("Fixing holes in the shapefile. Please wait. Polygon", k,"of",n.holes))
-    for (m in 2:n.poly[k]){
-      poly.dat@polygons[[has.hole[k]]]@Polygons[[m]]@hole<-F
-    }
+  for (k in 1:length(has.hole)){
+    print(paste("Fixing holes in the shapefile. Please wait. Polygon", k,"of",length(has.hole)))
+      poly.dat@polygons[[has.hole[k]]]@Polygons[[n.poly[k]]]@hole<-F
   }
   return(poly.dat)
 }

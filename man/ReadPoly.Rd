@@ -16,7 +16,7 @@ ReadPoly(shapefile, proj = GPS, fix.holes = TRUE, ID=NULL)
     Path to a shape file
 }
   \item{proj}{
-    The projection used in the file, default to \code{\link[geospacom]{GPS}} (long-lat coordinates)
+    The projection used in the file, default to GPS   %defaults to the Swiss flat prjection
 }
   \item{fix.holes}{
     By default, tries to fix holes in the polygon frame
@@ -29,7 +29,7 @@ ReadPoly(shapefile, proj = GPS, fix.holes = TRUE, ID=NULL)
       A \code{\link[sp]{SpatialPolygonsDataFrame}}
 }
 \author{
-  Davide Morselli, Mathieu Cossuta
+  Mathieu Cossuta, Davide Morselli
 }
 \examples{
 \dontrun{

@@ -22,7 +22,7 @@ ReadPoly(shapefile, proj = GPS, fix.holes = TRUE, ID=NULL)
     By default, tries to fix holes in the polygon frame
 }
   \item{ID}{
-    A to be passed to \code{\link[maptools]{readShapePoly}}. It specifies the name of a column in the shape file DBF containing the ID values of the shapes - the values will be converted to a character vector. If NULL, the ID of the polygons is taken
+    A character vector to be passed to \code{\link[maptools]{readShapePoly}}. It specifies the name of a column in the .dbf file containing the ID values of the shapes - the values will be converted to a character vector. If NULL (default), the ID of the polygons is taken.
 }
 }
 \value{
@@ -34,7 +34,7 @@ ReadPoly(shapefile, proj = GPS, fix.holes = TRUE, ID=NULL)
 \examples{
 \dontrun{
 data(GPS)
-yu.reg <- ReadPoly("path/to/my/shapefile.shp")
+yu.reg <- ReadPoly("path/to/my/shapefile.shp", proj=GPS)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

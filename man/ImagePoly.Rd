@@ -9,13 +9,13 @@ Plots regional data in map plots
 }
 \usage{
 ImagePoly(poly, 
-	  dataframe, 
-	  context.id, 
-	  names = NULL, 
+      	  dataframe, 
+      	  context.id, 
+      	  names = NULL, 
       	  show.names = NULL, 
-	  method = "equal", 
-	  nbr = 10, 
-	  ...)
+      	  method = "equal", 
+      	  nbr = 10, 
+      	  ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -51,18 +51,18 @@ ImagePoly(poly,
 }
 \examples{
 \dontrun{
-yu.reg <- ReadPoly("path/to/my/shapefile.shp")
-names(yu.reg) <- "area.name"
-d.geo <- DistanceMatrix(yu.reg, "area.name")
-}
-\dontshow{
-data(d_geo)
-d.geo <- d_geo
-}
+data(CH1903)
+yu.reg <- ReadPoly("path/to/my/shapefile.shp", proj = CH1903)
 
-\dontrun{
+data(yu.reg)
+names(yu.reg) <- "area.name"
+d.geo <- DistanceMatrix(yu.reg, "area.name", longlat = FALSE)
+
 data(homog_census)
-ImagePoly(yu.reg, homog_census, "Homog_00")
+ImagePoly(poly=yu.reg, 
+	  dataframe=homog_census, 
+	  context.id="area.name", 
+	  names ="Homog_00")
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

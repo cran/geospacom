@@ -6,8 +6,6 @@ importFrom("geosphere", "distm")
 
 export("ReadPoly",
        "ImagePoly",
-       "DistanceMatrix",
-       "addID"
+       "DistanceMatrix"
 	)
-
 

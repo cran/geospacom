@@ -15,6 +15,6 @@
 }
 \examples{
 data(GPS)
-## maybe str(GPS) ; plot(GPS) ...
+str(GPS)
 }
 \keyword{datasets}

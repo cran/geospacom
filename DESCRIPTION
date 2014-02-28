@@ -2,29 +2,28 @@ Package: geospacom
 Type: Package
 Title: Helper package to facilitate the generation of distance matrices
         used in the package spacom.
-Version: 0.5-6
-Date: 2013-03-28
-Authors@R: c(person("Mathieu", "Cossuta", role = "aut", email =
-        "mcossutta@gmail.com"), person("Davide", "Morselli", role =
-        "aut", email = "davide.morselli@unil.ch"), person("Till",
-        "Junge", role = c("aut", "cre"), email =
-        "till.junge@gmail.com"), person("Sandra", "Penic", role =
-        "aut", email = "sandra.penic@unil.ch"), person("Guy",
-        "Elcheroth", role = "ctb", email = "guy.elcheroth@unil.ch"),
-        person("Stephanie", "Glaeser", role = "ctb"))
+Version: 0.5-7
+Date: 2014-02-28
+Authors@R: c(person("Davide", "Morselli", role =c("aut","cre"), email =
+    "davide.morselli@unil.ch"), person("Mathieu", "Cossuta", role = "aut",
+    email = "mcossutta@gmail.com"), person("Till", "Junge", role = "aut", email
+    = "till.junge@gmail.com"), person("Sandra", "Penic", role = "aut", email =
+    "sandra.penic@unil.ch"), person("Guy", "Elcheroth", role = "ctb", email =
+    "guy.elcheroth@unil.ch"), person("Stephanie", "Glaeser", role = "ctb"))
 Maintainer: Davide Morselli <davide.morselli@unil.ch>
-Description: Generates distance matrices from shape files and
-        represents spatially weighted multilevel analysis results (see
-        spacom)
+Description: Generates distance matrices from shape files and represents
+    spatially weighted multilevel analysis results (see spacom)
 License: GPL (>= 2)
 LazyLoad: true
-Depends: R(>= 2.15-0), spacom, classInt, rgeos, rgdal, sp, maptools,
-        geosphere
+Depends: R(>= 2.15-0), rgeos, classInt, sp, maptools, geosphere
 Enhances: spacom
-Packaged: 2013-05-21 10:48:54 UTC; dmorsell
-Author: Davide Morselli [aut], Mathieu Cossuta [aut, cre], Till Junge
-        [aut], Sandra Penic [aut], Guy Elcheroth [ctb], Stephanie
-        Glaeser [ctb]
+Packaged: 2014-03-19 07:51:17 UTC; davide
+Author: Davide Morselli [aut, cre],
+    Mathieu Cossuta [aut],
+    Till Junge [aut],
+    Sandra Penic [aut],
+    Guy Elcheroth [ctb],
+    Stephanie Glaeser [ctb]
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-05-21 16:48:31
+Date/Publication: 2014-03-19 10:16:42

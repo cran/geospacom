@@ -40,15 +40,15 @@ DistanceMatrix(poly, id, unit = 1000, longlat = TRUE, fun = distHaversine)
 
 \examples{
 ## load the CRS projection definition and a shape file
+data(CH1903)
 \dontrun{
- data(GPS)
- yu.reg <- ReadPoly("path/to/my/shapefile.shp")
- names(yu.reg) <- "area.name"
-}
-\dontshow{
+  yu.reg <- ReadPoly("path/to/my/shapefile.shp", proj = CH1903)
+
+
 data(yu.reg)
+names(yu.reg) <- "area.name"
+d.geo <- DistanceMatrix(yu.reg, "area.name", longlat = FALSE)
 }
-d.geo <- DistanceMatrix(yu.reg, "area.name",longlat=FALSE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

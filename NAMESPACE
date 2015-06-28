@@ -3,6 +3,7 @@ importFrom("rgeos", "gCentroid", "gDistance")
 importFrom("classInt", "classIntervals")
 importFrom("sp", "spplot", "CRS")
 importFrom("geosphere", "distm")
+importFrom("geosphere", "distHaversine")
 
 export("ReadPoly",
        "ImagePoly",

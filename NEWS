@@ -1,0 +1,5 @@
+0.5-8
+
+NA are are plotted as blank polygons (i.e., white regions)
+
+fixed the possibility to pass additional parameters ot the function distm of the geosphere package

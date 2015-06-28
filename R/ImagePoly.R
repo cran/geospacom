@@ -16,7 +16,7 @@ function(poly,dataframe,context.id,names=NULL,show.names=NULL,method="equal",nbr
   poly <- polyA[[1]]
 
 
-  P<-mapply(function(x,y){performSinglePlot(poly,x,y,method,nbr)},names_coded,show.names,SIMPLIFY=FALSE)
+  P<-mapply(function(x,y){performSinglePlot(poly,x,y,method,nbr)},names_coded,show.names,SIMPLIFY=FALSE,...)
 
 
   N <- length(P)

@@ -5,7 +5,7 @@
 ## author Till Junge <till.junge@gmail.com>                                   ##
 ##                                                                            ##
 ## Copyright (c) UNIL (Universite de Lausanne)                                ##
-## NCCR - LIVES (National Centre of Competence in Research "LIVES –           ##
+## NCCR - LIVES (National Centre of Competence in Research LIVES              ##
 ## Overcoming vulnerability: life course perspectives",                       ##
 ## <http://www.lives-nccr.ch/>)                                               ##
 ##                                                                            ##
@@ -55,8 +55,8 @@ addID <- function(poly,correspondance,area,name){
   return(poly)
 }
 
-performAddFields <-  function(poly,champ,context.id,names=NULL) {
-    y <- as.character(names(champ))
+performAddFields <-  function(poly,dataframe,context.id,names=NULL) {
+    y <- as.character(names(dataframe))
     y <- y[!y==context.id]
     # Check that the names are in y
     for (name in names) {
@@ -67,12 +67,12 @@ performAddFields <-  function(poly,champ,context.id,names=NULL) {
     m <-length(names)
     for (k in 1:m){
       name <- names[[k]]
-      poly@data[[name]]<- rep(0,l)
+      poly@data[[name]]<- rep(NA,l)
       
       for (i in 1:l)
       {
-        #poly@data[[name]][poly@data[[context.id]]==i]<- champ[[name]][i]
-        poly@data[[name]][poly@data[[context.id]]==champ[[context.id]][i]]<- champ[[name]][i]
+        #poly@data[[name]][poly@data[[context.id]]==i]<- dataframe[[name]][i]
+        poly@data[[name]][poly@data[[context.id]]==dataframe[[context.id]][i]]<- dataframe[[name]][i]
       }
     }
     return(list(poly,names))
@@ -80,7 +80,7 @@ performAddFields <-  function(poly,champ,context.id,names=NULL) {
 
 performSinglePlot <- function(poly,name,main=name,method="equal",nbr=10,...)
   {
-    at = classIntervals(poly@data[[name]], n = nbr, style = method)$brks
+    at = classIntervals(unique(poly@data[[name]][!is.na(poly@data[[name]])]), n = nbr, style = method, ...)$brks
     at[length(at)]<- at[length(at)]+0.01
     #col = brewer.pal(nbr,"YlOrRd")
     col=rev(heat.colors(nbr))
